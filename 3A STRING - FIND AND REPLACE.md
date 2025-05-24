@@ -4,18 +4,20 @@
 ---
 
 ### AIM  
-To write a Python function to accept a string, identify a word to be replaced, and replace it with a new word provided by the user.
+To create a Python function convert that transforms each uppercase letter to lowercase, each lowercase letter to uppercase, and replaces all special characters with "bb".
 
----
 
 ### ALGORITHM
 
 1. Begin the program.  
-2. Input the original string `str1` and the word to be replaced `replace_str`.  
-3. Ask the user to input the new replacement word `str2`.  
-4. Use the `replace()` method in Python to replace all occurrences of `replace_str` in `str1` with `str2`.  
-5. Store the modified string in `str3`.  
-6. Display the original string (`str1`) and the modified string (`str3`).  
+2. Define a function named convert that accepts a string as an argument.  
+3. Initialize an empty result string.
+4. Traverse each character in the input string:
+    - If the character is uppercase, convert it to lowercase and add to the result.
+    - If the character is lowercase, convert it to uppercase and add to the result.
+    - If it is a special character (not a letter), add "bb" to the result.
+5. Return the final result string.
+6. Call the function with a test string and display the result.
 7. Terminate the program.
 
 ---
@@ -23,8 +25,25 @@ To write a Python function to accept a string, identify a word to be replaced, a
 ### PROGRAM
 
 ```
+#Reg.NO:212222040120
+#Name:PRASANNA R
+def convert(a):
+    new=""
+    for i in range(0,len(a)):
+        if a[i].isupper():
+            new+=a[i].lower()
+        elif a[i].islower():
+            new+=a[i].upper()
+        else:
+            new+="bb"
+    print(new)
+            
 ```
 
 ### OUTPUT
 
+![LAB3 DAY1](https://github.com/user-attachments/assets/616a8943-2aa4-43e7-bcc0-f33762adec66)
+
+
 ### RESULT
+Thus, the Python program to convert uppercase to lowercase, lowercase to uppercase, and replace special characters with "bb" has been implemented and executed successfully.
